@@ -25,7 +25,8 @@ public class JwtService {
     public JwtService() throws NoSuchAlgorithmException {
         KeyGenerator keyGen = KeyGenerator.getInstance("HmacSHA256");
         SecretKey sk = keyGen.generateKey();
-        secretKey = Base64.getEncoder().encodeToString(sk.getEncoded());
+        System.out.println("Key : " + Base64.getEncoder().encodeToString(sk.getEncoded()));
+        secretKey = "EKgxIeIGaKO0x2HOy5iN76m3G8/xwm4fypKk2gYQg5I=";
     }
 
     public String generateToken(String username){
