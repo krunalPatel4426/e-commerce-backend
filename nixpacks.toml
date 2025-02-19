@@ -1,0 +1,11 @@
+[build]
+builder = "paketobuildpacks/builder:base"
+
+[phases.setup]
+aptPkgs = ["openjdk-17-jdk"]
+
+[phases.build]
+cmd = "./mvnw package -DskipTests"
+
+[start]
+cmd = "java -jar target/*.jar"
